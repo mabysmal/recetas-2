@@ -9,8 +9,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        terracota: "#C84B31",
+        olivo: "#7D8471",
+        crema: "#ECDBBA",
+        negro: "191919",
+      },
+      fontFamily: {
+        'spicy': ['var(--font-spicy)', 'sans-serif'],
+        'playfair': ['var(--font-playfair)', 'serif'],
+        'source': ['var(--font-source)', 'serif'],
+        'open': ['var(--font-open)', 'sans-serif'],
+
       },
     },
   },
