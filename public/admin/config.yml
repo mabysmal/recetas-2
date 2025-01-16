@@ -7,15 +7,15 @@ backend:
     deleteMedia: Delete "{{path}}"
     openAuthoring: '{{message}}'
   name: git-gateway
-  repo: mabysmal/netushi
+  repo: mabysmal/recetario-2
   branch: main
 
 media_folder: public/images
 public_folder: /images
 publish_mode: editorial_workflow
 locale: 'es'
-site_url: 'https://netushi.com'
-logo_url: '/Netushi.png'
+site_url: 'a'
+logo_url: '/a.png'
 
 collections:
 
