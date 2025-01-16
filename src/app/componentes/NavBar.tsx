@@ -47,7 +47,7 @@ const NavBar = ({ logoText }: NavBarProps) => {
         <div className="hidden md:flex justify-between items-center h-20">
           {/* Logo Text */}
           <Link href="/" className="flex items-center">
-            <h1 className="text-3xl font-bold text-red hover:text-white">{logoText}</h1>
+            <h1 className="text-3xl font-bold text-red hover:text-crema">{logoText}</h1>
           </Link>
 
           {/* Desktop Menu */}
@@ -56,7 +56,7 @@ const NavBar = ({ logoText }: NavBarProps) => {
               <Link
                 key={item.title}
                 href={item.href}
-                className="text-red text-xl hover:text-white focus:text-dark-red"
+                className="text-red text-xl hover:text-crema focus:text-dark-red"
               >
                 {item.title}
               </Link>
@@ -72,7 +72,7 @@ const NavBar = ({ logoText }: NavBarProps) => {
                 <Link
                   key={item.title}
                   href={item.href}
-                  className="block px-3 py-2 text-white text-bold text-lg focus:text-red"
+                  className="block px-3 py-2 text-crema text-bold text-lg focus:text-red"
                 >
                   {item.title}
                 </Link>

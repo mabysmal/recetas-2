@@ -1,0 +1,113 @@
+backend:
+  commit_messages:
+    create: Create {{collection}} "{{slug}}"
+    update: Update {{collection}} "{{slug}}"
+    delete: Delete {{collection}} "{{slug}}"
+    uploadMedia: Upload "{{path}}"
+    deleteMedia: Delete "{{path}}"
+    openAuthoring: '{{message}}'
+  name: git-gateway
+  repo: mabysmal/netushi
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+publish_mode: editorial_workflow
+locale: 'es'
+site_url: 'https://netushi.com'
+logo_url: '/Netushi.png'
+
+collections:
+
+  - name: "recetas"
+    label: "Recetas"
+    folder: "content/recetas"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "menu/{{slug}}"
+    fields:
+
+      - label: "Título de la Receta"
+        name: "title"
+        widget: "text"
+        required: true
+      
+      - label: "Categorías"
+        name: "categories"
+        widget: "select"
+        required: true
+        multiple: true
+        options:
+          - { label: "Aderezos y salsas", value: "aderezos_y_salsas" }
+          - { label: "Aperitivos y complementos", value: "aperitivos_y_complementos" }
+          - { label: "Aves", value: "aves" }
+          - { label: "Bebidas", value: "bebidas" }
+          - { label: "Celebraciones", value: "celebraciones" }
+          - { label: "Cocina Asiática", value: "cocina_asiatica" }
+          - { label: "Cocina Italiana", value: "cocina_italiana" }
+          - { label: "Cocina Mediterránea", value: "cocina_mediterranea" }
+          - { label: "Cocina Mexicana", value: "cocina_mexicana" }
+          - { label: "Cocina de la india", value: "cocina_india" }
+          - { label: "Cocina Vegana", value: "cocina_vegana" }
+          - { label: "Cocina Vegetariana", value: "cocina_vegetariana" }
+          - { label: "Desayunos", value: "desayunos" }
+          - { label: "Dulces y caramelos", value: "dulces_y_caramelos" }
+          - { label: "Ensaladas", value: "ensaladas" }
+          - { label: "Entradas", value: "entradas" }
+          - { label: "Panadería", value: "panaderia" }
+          - { label: "Parrilladas", value: "parrilladas" }
+          - { label: "Pastas", value: "pastas" }
+          - { label: "Pescados y mariscos", value: "pescados_y_mariscos" }
+          - { label: "Plato fuerte", value: "plato_fuerte" }
+          - { label: "Postres", value: "postres" }
+          - { label: "Puerco", value: "puerco" }
+          - { label: "Sin Gluten", value: "recetas_sin_gluten" }
+          - { label: "Sin Lactosa", value: "recetas_sin_lactosa" }
+          - { label: "Res", value: "res" }
+          - { label: "Snacks", value: "snacks" }
+          - { label: "Sopas", value: "sopas" }
+          - { label: "Tartas y quiches", value: "tartas_y_quiches" }
+
+
+      - label: "Descripción"
+        name: "description"
+        widget: "text"
+
+
+      - label: "Imagen"
+        name: "image"
+        widget: "image"
+        required: true
+        allow_multiple: false
+        media_library:
+          config:
+            multiple: false
+      
+      - label: "Tiempo Prep"
+        name: "tiempo-prep"
+        widget: "number"
+
+      - label: "Tiempo Cocc."
+        name: "tiempo-cook"
+        widget: "number"
+
+      - label: "Tiempo Total"
+        name: "tiempo-total"
+        widget: "number"
+
+      - label: "Porciones"
+        name: "porciones"
+        widget: "number"
+
+      - name: ingredientes
+        widget: list
+        fields:
+          - {label: "Cantidad", name: "cantidad", widget: "string"}
+          - {label: "Unidad", name: "unidad", widget: "string"}
+          - {label: "Ingrediente", name: "nombre", widget: "string"}      
+
+      - label: 'Instrucciones'
+        name: 'instrucciones' 
+        widget: 'markdown'
+      
+
