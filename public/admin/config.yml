@@ -6,8 +6,8 @@ backend:
     uploadMedia: Upload "{{path}}"
     deleteMedia: Delete "{{path}}"
     openAuthoring: '{{message}}'
-  name: git-gateway
-  repo: mabysmal/recetario-2
+  name: github
+  repo: mabysmal/recetas-2
   branch: main
 
 media_folder: public/images
